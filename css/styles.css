@@ -82,9 +82,12 @@ ul {
   color: var(--prime-linktxt-color);
 }
 
-.nav .item:not(:last-child),
-.contacts .item:not(:last-child) {
+.nav .item:not(:last-child) {
   margin-right: 50px;
+}
+
+.contacts .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .header .link.current {
@@ -119,7 +122,7 @@ ul {
 }
 
 .contacts {
-  margin-left: auto;
+  margin-left: 318px;
 }
 
 .header .mail,
@@ -128,13 +131,26 @@ ul {
 }
 
 .mail::before {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   content: "";
   background-image: url(../img/iconsheaderfooter/envelope.svg);
   fill: var(--prime-text-color);
   width: 16px;
   height: 12px;
+  margin-right: 10px;
+  /* background-size: contain; */
+  /* background-color: tomato; */
+}
+
+.phone::before {
+  display: inline-flex;
+  align-items: center;
+  content: "";
+  background-image: url(../img/iconsheaderfooter/smartphone.svg);
+  fill: var(--prime-text-color);
+  width: 10px;
+  height: 16px;
   margin-right: 10px;
 }
 
@@ -147,6 +163,7 @@ ul {
 .header {
   border-bottom: 1px solid #ececec;
 }
+
 /*HERO*/
 
 .hero {
@@ -204,7 +221,7 @@ ul {
   background-color: var(--herobtn-link-color);
 }
 
-/*advantages*/
+/*Advantages*/
 
 .visually-hidden {
   position: absolute;
@@ -361,7 +378,7 @@ ul {
   width: 20px;
   height: 20px;
   fill: #188ce8;
-  background-size: contain;
+  background-size: 20px 20px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -427,6 +444,36 @@ ul {
 }
 .footer .list {
   margin-top: 20px;
+}
+
+.joinus {
+  margin-left: 70px;
+}
+
+.joinus .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--link-hover-color);
+}
+
+.joinus .list {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  fill: var(--link-hover-color);
+}
+
+.joinus > .icon {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 /*PORTFOLIO*/

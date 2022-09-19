@@ -422,7 +422,7 @@ ul {
 .clients .item:focus,
 .clients .item:hover .item-client,
 .clients .item:focus .item-client {
-  border: 1px solid var(--prime-link-color);
+  border-color: var(--prime-link-color);
   fill: var(--prime-link-color);
 }
 
@@ -493,18 +493,8 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.joinus .item:nth-child(1) {
-  background-image: url(../img/iconsheaderfooter/instagram.svg);
-}
-.joinus .item:nth-child(2) {
-  background-image: url(../img/iconsheaderfooter/twitter.svg);
-}
-.joinus .item:nth-child(3) {
-  background-image: url(../img/iconsheaderfooter/facebook.svg);
-}
-.joinus .item:nth-child(4) {
-  background-image: url(../img/iconsheaderfooter/linkedin.svg);
+.joinus .icon {
+  fill: var(--link-hover-color);
 }
 
 .footer .item:hover,

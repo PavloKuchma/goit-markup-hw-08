@@ -7,6 +7,7 @@
   --team-bcg-color: #f5f4fa;
   --social-icons-color: #afb1b8;
   --footer-color: #2f303a;
+  --border-color: #eeeeee;
 }
 
 /*global styles*/
@@ -51,7 +52,7 @@ ul {
 }
 
 .container {
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
@@ -347,7 +348,7 @@ ul {
   text-align: center;
 
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .social-list {
@@ -362,17 +363,18 @@ ul {
   padding-right: 32px;
 }
 
-.social-list .s-item {
+.social-list .s-link {
   width: 44px;
   height: 44px;
-  background-color: red;
   border-radius: 50%;
-  background-position: center;
-  background-repeat: repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.social-list .s-item:hover,
-.social-list .s-item:focus {
+.social-list .s-link:hover,
+.social-list .s-link:focus {
   background-color: var(--prime-link-color);
 }
 
@@ -380,8 +382,8 @@ ul {
   fill: var(--social-icons-color);
 }
 
-.s-item:hover .icon,
-.s-item:focus .icon {
+.s-link:hover .icon,
+.s-link:focus .icon {
   fill: var(--link-hover-color);
 }
 
@@ -403,7 +405,7 @@ ul {
   display: flex;
   gap: 30px;
 }
-.clients .item {
+.clients .link-client {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -418,10 +420,15 @@ ul {
   fill: var(--social-icons-color);
 }
 
-.clients .item:hover,
-.clients .item:focus,
-.clients .item:hover .item-client,
-.clients .item:focus .item-client {
+/* . {
+  width: 170px;
+  height: 92px;
+} */
+
+.clients .link-client:hover,
+.clients .link-client:focus,
+.clients .link-client:hover .item-client,
+.clients .link-client:focus .item-client {
   border-color: var(--prime-link-color);
   fill: var(--prime-link-color);
 }
@@ -485,20 +492,22 @@ ul {
   margin-top: 20px;
 }
 
-.joinus .item {
+.joinus .link {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .joinus .icon {
   fill: var(--link-hover-color);
 }
 
-.footer .item:hover,
-.footer .item:focus {
+.joinus .link:hover,
+.joinus .link:focus {
   background-color: var(--prime-link-color);
 }
 
@@ -551,9 +560,9 @@ ul {
 }
 
 .portfolio-list .portfolio-sign {
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

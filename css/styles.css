@@ -149,9 +149,9 @@ ul {
 .header .link:hover,
 .header .link:focus,
 .mail:hover .icon-mail,
-.mail:hover .icon-mail,
+.mail:focus .icon-mail,
 .phone:hover .icon-phone,
-.phone:hover .icon-phone {
+.phone:focus .icon-phone {
   color: var(--prime-link-color);
   fill: var(--prime-link-color);
 }

@@ -51,8 +51,9 @@ ul {
   font-family: inherit;
 }
 
+/* outline: 2px solid blue; */
+
 .container {
-  /* outline: 2px solid blue; */
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;

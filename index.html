@@ -69,7 +69,9 @@
       <section class="hero section">
         <div class="container">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button data-modal-open type="button" class="button">
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!--Advantages-->
@@ -507,6 +509,97 @@
         </div>
       </div>
     </footer>
+
+    <!--MODAL WINDOW-->
+    <div data-modal class="backdrop is-hidden">
+      <div class="data-modal">
+        <h2 class="title">Форма зворотнього зв'язку</h2>
+        <p class="text">Залиште контактні дані і ми з ВАМИ зв'яжемося</p>
+        <div class="fcf-body">
+          <div id="fcf-form">
+            <h3 class="fcf-h3">Заповніть форму</h3>
+
+            <form
+              id="fcf-form-id"
+              class="fcf-form-class"
+              method="post"
+              action="contact-form-process.php"
+            >
+              <div class="fcf-form-group">
+                <label for="Name" class="fcf-label">ВАШЕ ім'я</label>
+                <div class="fcf-input-group">
+                  <input
+                    type="text"
+                    id="Name"
+                    name="Name"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">ВАШ e-mail</label>
+                <div class="fcf-input-group">
+                  <input
+                    type="email"
+                    id="Email"
+                    name="Email"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">ВАШ телефон</label>
+                <div class="fcf-input-group">
+                  <input
+                    type="phone"
+                    id="tel"
+                    name="tel"
+                    class="fcf-form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">ВАШІ побажання</label>
+                <div class="fcf-input-group">
+                  <textarea
+                    id="Message"
+                    name="Message"
+                    class="fcf-form-control"
+                    rows="6"
+                    maxlength="3000"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="fcf-form-group">
+                <button
+                  type="submit"
+                  id="fcf-button"
+                  class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"
+                >
+                  Надіслати
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <button
+          data-modal-close
+          class="close-button"
+          aria-label="Dismiss alert"
+          type="button"
+          data-close
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -702,6 +702,11 @@ img {
   min-height: 580px;
   min-width: 530px;
 
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+
   background-color: var(--link-hover-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -720,9 +725,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-left: 40px;
   margin-bottom: 12px;
 
   color: var(--prime-linktxt-color);
@@ -783,7 +785,8 @@ img {
 .form-field .form-input:focus + .icon {
   fill: var(--prime-link-color);
 }
-.form-field .form-input:focus {
+.form-field .form-input:focus,
+.form-field .comment:focus {
   border: 1px solid var(--prime-link-color);
   outline: none;
 }
@@ -839,7 +842,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
-/*fckng CHECKBOX*/
+/*DONE CHECKBOX*/
 
 .form-checkbox {
   display: flex;
@@ -856,7 +859,7 @@ img {
   margin-bottom: 30px;
 }
 
-/* .checkbox {
+.checkbox {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -867,9 +870,6 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-} */
-
-.label-checkbox {
 }
 
 .customckbx {
@@ -879,28 +879,21 @@ img {
   margin-right: 8px;
   width: 16px;
   height: 15px;
+  background-color: var(--link-hover-color);
   border: 2px solid var(--prime-linktxt-color);
   border-radius: 3px;
 }
 
 .termbox {
-  width: 11px;
-  height: 8px;
-  fill: none;
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: var(--all-hovfoc-function);
+  width: 16px;
+  height: 12px;
+  fill: var(--link-hover-color);
 }
 
 .form-checkbox .checkbox:checked + .customckbx {
   border: 2px solid var(--prime-link-color);
   background-color: var(--prime-link-color);
   background-origin: border-box;
-}
-
-.form-checkbox .checkbox:checked + .customckbx {
-  background: url(../img/iconsheaderfooter/iconsend.svg);
 }
 
 .form .policy {

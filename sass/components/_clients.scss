@@ -1,0 +1,58 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients__link-client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $social-icons-color;
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $all-hovfoc-function;
+
+  &:hover,
+  &:focus {
+    border-color: $prime-link-color;
+    fill: $prime-link-color;
+  }
+}
+
+.clients__item-client {
+  width: 106px;
+  height: 60px;
+  fill: $social-icons-color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: $all-hovfoc-function;
+
+  .clients__link-client:hover &,
+  .clients__link-client:focus & {
+    border-color: $prime-link-color;
+    fill: $prime-link-color;
+  }
+}
+
+.clients__link-client:hover,
+.clients__link-client:focus,
+.clients__link-client:hover .clients__item-client,
+.clients__link-client:focus .clients__item-client {
+  border-color: $prime-link-color;
+  fill: $prime-link-color;
+}

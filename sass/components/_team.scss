@@ -4,11 +4,9 @@
   background-color: $team-bcg-color;
 }
 .team__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  @include font-face(700, 36, 1.2, 00.03);
+
   text-align: center;
-  letter-spacing: 0.03em;
 
   margin-bottom: 50px;
 }
@@ -25,15 +23,12 @@
 }
 
 .team__name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  @include font-face(500, 16, 1.2, 00.03);
 }
+
 .team__text {
-  font-size: 16px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  @include font-face(null, 16, 1.2, 00.03);
+
   color: $prime-text-color;
 
   margin-top: 10px;
@@ -66,11 +61,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  @include flexCC;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: $all-hovfoc-function;

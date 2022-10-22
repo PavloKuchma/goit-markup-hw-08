@@ -43,10 +43,8 @@
 .header__logo,
 .footer__logo {
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+
+  @include font-face(700, 26, 1.2, 00.03);
   color: $prime-link-color;
 }
 
@@ -59,10 +57,8 @@
 }
 
 .header__link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
+  @include font-face(500, 14, 1.1, 00.02);
+
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;

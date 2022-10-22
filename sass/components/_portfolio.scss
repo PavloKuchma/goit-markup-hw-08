@@ -1,0 +1,109 @@
+.portfolio__section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+/*FILTER BUTTONS*/
+.portfolio__filter {
+  @include flexCC;
+  gap: 8px;
+}
+
+.portfolio__button {
+  @include font-face(500, 16, 1.6, 00.03);
+
+  text-align: center;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: $all-hovfoc-function;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    background-color: $prime-link-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}
+
+/*PORTFOLIO MAIN*/
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-left: 0;
+  margin-top: 50px;
+}
+
+.portfolio-list__sign {
+  border-bottom: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.portfolio-list__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-list__item {
+  max-width: 370px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: $all-hovfoc-function;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio-list__title {
+  @include font-face(700, 18, 2, 00.06);
+
+  text-align: left;
+}
+
+.portfolio-list__text {
+  @include font-face(null, 16, 1.9, 00.03);
+
+  color: $prime-text-color;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.portfolio-list__onhover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  width: 370px;
+  @include font-face(400, 18, 1.6, 00.03);
+
+  color: $link-hover-color;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(99%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: $all-hovfoc-function;
+
+  .portfolio-list__item:hover &,
+  .portfolio-list__item:focus & {
+    transform: translateY(0%);
+  }
+}

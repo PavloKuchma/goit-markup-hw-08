@@ -1,8 +1,6 @@
 .wwd__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  @include font-face(700, 36, 1.2, 00.03);
+
   text-align: center;
 
   margin-bottom: 50px;
@@ -37,11 +35,9 @@
 }
 
 .wwd__text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
+  @include font-face(700, 14, 1.1, 00.03);
+
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: $link-hover-color;

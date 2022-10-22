@@ -12,9 +12,7 @@
 
 .address__link,
 .address__map {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
+  @include font-face(null, 14, 1.7, 00.03);
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   transition-property: color;
@@ -46,10 +44,8 @@
 
 .joinus__title,
 .mailing__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
+  @include font-face(700, 14, 1.1, 00.03);
+
   text-transform: uppercase;
 
   color: $link-hover-color;
@@ -66,9 +62,7 @@
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCC;
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -102,12 +96,10 @@
 
 .mailing__input textarea::placeholder {
   font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.2;
+  @include font-face(400, 16, 1.2, 00.03);
+
   display: flex;
   align-items: center;
-  letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
 }
@@ -115,13 +107,13 @@
 .mailing__btn-submit {
   width: 200px;
   height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
+
+  @include font-face(700, 16, 1.9, 00.06);
+
   text-align: center;
   justify-content: center;
+
   margin-left: 12px;
-  letter-spacing: 0.06em;
   color: $link-hover-color;
   background-color: $prime-link-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

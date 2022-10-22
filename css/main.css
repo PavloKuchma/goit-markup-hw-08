@@ -659,7 +659,7 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop__is-hidden {
+.backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;

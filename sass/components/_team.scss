@@ -1,7 +1,12 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $team-bcg-color;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .team__title {
   @include font-face(700, 36, 1.2, 00.03);
@@ -12,9 +17,12 @@
 }
 
 .team__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  margin-bottom: 30px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .team .section {

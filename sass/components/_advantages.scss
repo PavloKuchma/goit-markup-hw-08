@@ -12,32 +12,56 @@
 }
 
 .advantages__list {
-  display: flex;
-  flex-shrink: 1;
-  gap: 30px;
-  padding-left: 0;
+  width: 100vw;
+  @include tablet {
+    width: calc((100% / 2) - 30px);
+  }
+
+  @include desktop {
+    display: flex;
+    flex-shrink: 1;
+    gap: 30px;
+    padding-left: 0;
+  }
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .advantages__title {
   @include font-face(700, 14, 1.1, 00.03);
 
-  width: 270px;
+  width: 100%;
   margin-bottom: 10px;
   margin-top: 30px;
   text-transform: uppercase;
+  text-align: center;
+  @include tablet {
+    text-align: left;
+    width: 100%;
+  }
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .advantages__text {
   @include font-face(null, 14, 1.7, 00.03);
-
-  width: 270px;
-
   color: $prime-text-color;
+  width: 100%;
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .advantages__advanicon {

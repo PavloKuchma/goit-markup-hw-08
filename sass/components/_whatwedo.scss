@@ -1,3 +1,9 @@
+.wwd {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+}
 .wwd__title {
   @include font-face(700, 36, 1.2, 00.03);
 

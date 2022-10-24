@@ -1,30 +1,72 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 198px;
 
   background-color: #c4c4c4;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../img/background/bgimage.jpg);
+    url(img/background/mobiback1x.jpg);
+
+  @include retina {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(img/background/mobiback2x.jpg);
+  }
+
+  @include tablet {
+    max-width: 768px;
+    height: 400px;
+
+    @include retina {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(img/background/tabletback2x.jpg);
+    }
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    height: 400px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    @include retina {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(img/background/deskback2x.jpg);
+    }
+  }
 }
 
 .herotitle {
   margin-left: auto;
   margin-right: auto;
 }
+
 .hero__title {
-  width: 696px;
-  @include font-face(900, 44, 1.4, 00.06);
+  width: 360px;
+  @include font-face(900, 26, 1.6, 00.06);
 
   text-align: center;
   text-transform: uppercase;
   color: $link-hover-color;
+
+  @include desktop {
+    width: 696px;
+    @include font-face(900, 44, 1.4, 00.06);
+  }
 }
 
 .btn-order {

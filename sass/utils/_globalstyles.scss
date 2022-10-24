@@ -1,3 +1,5 @@
+@import './mixins';
+
 body {
   font-family: 'Roboto', sans-serif;
   color: $prime-linktxt-color;
@@ -40,10 +42,18 @@ button {
 }
 
 .container {
-  width: 1200px;
+  width: 480px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 a {

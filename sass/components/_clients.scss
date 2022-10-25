@@ -16,12 +16,12 @@
 }
 
 .clients__list {
-  @include respond(tablet) {
-    flex-wrap: wrap;
-  }
   display: flex;
 
   gap: 30px;
+  @include respond(tablet) {
+    flex-wrap: wrap;
+  }
 }
 
 .clients__link-client {

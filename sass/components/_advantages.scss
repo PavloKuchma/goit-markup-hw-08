@@ -15,10 +15,10 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
   }
 
   @include desktop {
-    display: flex;
     flex-shrink: 1;
     gap: 30px;
     padding-left: 0;
@@ -29,7 +29,7 @@
   max-width: 450px;
 
   @include tablet {
-    width: calc((100% / 2) - 60px);
+    width: 354px;
   }
 }
 
@@ -46,26 +46,22 @@
 .advantages__title {
   @include font-face(700, 14, 1.1, 00.03);
 
-  width: 50%;
+  width: 270px;
   margin-bottom: 10px;
   margin-top: 30px;
   text-transform: uppercase;
   text-align: center;
   @include tablet {
     text-align: left;
-    width: 100%;
-  }
-  @include desktop {
-    width: 270px;
   }
 }
 
 .advantages__text {
   @include font-face(null, 14, 1.7, 00.03);
   color: $prime-text-color;
-  width: 100%;
+  width: 450px;
   @include tablet {
-    width: 50%;
+    width: 354px;
   }
   @include desktop {
     width: 270px;
@@ -79,17 +75,13 @@
   width: 100%;
   height: 120px;
   @include tablet {
-    width: 50%;
+    width: 100%;
   }
 
   @include desktop {
     height: 120px;
     width: 270px;
   }
-}
-
-.advantage__item {
-  min-width: 450px;
 }
 
 .advantages__icon {

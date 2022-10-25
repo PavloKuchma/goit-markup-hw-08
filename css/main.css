@@ -40,19 +40,19 @@ button {
 }
 
 .container {
-  width: 480px;
+  max-width: 480px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -130,8 +130,6 @@ a {
   font-size: 24px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  padding-top: 16px;
-  padding-bottom: 16px;
   color: #2196f3;
 }
 @media screen and (min-width: 1200px) {
@@ -268,11 +266,10 @@ a {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 696px;
+    max-width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -322,12 +319,11 @@ a {
   margin: -1px;
 }
 
-.advantages__list {
-  width: 450px;
-}
 @media screen and (min-width: 768px) {
   .advantages__list {
-    width: calc(50% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -336,6 +332,15 @@ a {
     flex-shrink: 1;
     gap: 30px;
     padding-left: 0;
+  }
+}
+
+.advantage__item {
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .advantage__item {
+    width: 354px;
   }
 }
 
@@ -355,7 +360,7 @@ a {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  width: 100%;
+  width: 50%;
   margin-bottom: 10px;
   margin-top: 30px;
   text-transform: uppercase;
@@ -382,7 +387,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .advantages__text {
-    width: 100%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -402,7 +407,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .advantages__advanicon {
-    width: calc(100% - 30px - 30px);
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -410,6 +415,10 @@ a {
     height: 120px;
     width: 270px;
   }
+}
+
+.advantage__item {
+  min-width: 450px;
 }
 
 .advantages__icon {

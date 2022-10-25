@@ -64,10 +64,10 @@
 
   text-align: center;
   text-transform: uppercase;
-  color: $link-hover-color;
+  // color: $link-hover-color;
 
   @include desktop {
-    width: 696px;
+    max-width: 696px;
     @include font-face(900, 44, 1.4, 00.06);
   }
 }

@@ -323,7 +323,6 @@ a {
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 1;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -340,7 +339,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .advantage__item {
-    width: 354px;
+    width: calc(50% - 60px);
   }
 }
 

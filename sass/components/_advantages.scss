@@ -15,7 +15,6 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 1;
   }
 
   @include desktop {
@@ -30,7 +29,7 @@
   max-width: 450px;
 
   @include tablet {
-    width: 354px;
+    width: calc((100% / 2) - 60px);
   }
 }
 

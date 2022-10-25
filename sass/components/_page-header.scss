@@ -10,10 +10,29 @@
   }
 }
 
+.header__nav {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .header__container {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  padding-bottom: 0;
+  // height: 60px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  // padding-bottom: 0;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .pages:not(:last-child) {
@@ -56,8 +75,8 @@
   font-family: 'Raleway', sans-serif;
 
   @include font-face(700, 24, 1.1, 00.03);
-  margin-top: 16px;
-  margin-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: $prime-link-color;
 
   @include tablet {
@@ -72,10 +91,13 @@
 }
 
 .logo {
-  padding-left: 15px;
   padding-top: 16px;
-
-  margin-right: 93px;
+  padding-bottom: 16px;
+  @include tablet {
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
 .header__logo-studio {

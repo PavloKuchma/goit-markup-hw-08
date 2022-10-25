@@ -9,7 +9,7 @@
   }
 }
 .team__title {
-  @include font-face(700, 36, 1.2, 00.03);
+  @include font-face(500, 16, 1.2, 00.03);
 
   text-align: center;
 
@@ -60,6 +60,7 @@
 .team__social-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding-left: 32px;
   padding-right: 32px;

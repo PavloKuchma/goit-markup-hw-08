@@ -61,11 +61,22 @@ a {
   cursor: pointer;
 }
 
-.header__container,
 .header__list,
-.header__nav {
-  display: flex;
-  align-items: center;
+.header .contacts {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .header__list,
+.header .contacts {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 0;
 }
 
 .pages:not(:last-child) {
@@ -104,13 +115,28 @@ a {
 .footer__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
+  margin-top: 16px;
+  margin-bottom: 16px;
   color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .header__logo,
+.footer__logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+  }
 }
 
 .logo {
+  padding-left: 15px;
+  padding-top: 16px;
   margin-right: 93px;
 }
 
@@ -178,7 +204,7 @@ a {
   padding-top: 118px;
   padding-bottom: 198px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(img/background/mobiback1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background/mobiback1x.jpg);
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hero {
@@ -278,7 +304,7 @@ a {
 }
 
 .advantages__list {
-  width: 100vw;
+  width: 450px;
 }
 @media screen and (min-width: 768px) {
   .advantages__list {
@@ -351,9 +377,20 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  height: 120px;
-  width: 270px;
   background-color: #f5f4fa;
+  width: 100%;
+  height: 120px;
+}
+@media screen and (min-width: 768px) {
+  .advantages__advanicon {
+    width: calc(100% - 30px - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__advanicon {
+    height: 120px;
+    width: 270px;
+  }
 }
 
 .advantages__icon {
@@ -540,7 +577,7 @@ a {
   display: flex;
   gap: 30px;
 }
-@media only screen and (max-width: 767.5px) {
+@media only screen and (max-width: 1199.5px) {
   .clients__list {
     flex-wrap: wrap;
   }
@@ -595,12 +632,22 @@ a {
 }
 
 .footer {
+  max-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    max-width: 1600px;
+  }
 }
 
 .footer__logo-studio {
@@ -678,22 +725,37 @@ a {
   fill: #ffffff;
 }
 
-.mailing {
-  margin-left: 93px;
+@media screen and (min-width: 1200px) {
+  .mailing {
+    margin-left: 93px;
+  }
 }
 
-.mailing__sendmail {
-  margin-top: 20px;
+@media screen and (min-width: 1200px) {
+  .mailing__sendmail {
+    margin-top: 20px;
+  }
 }
 
 .mailing__input {
-  width: 358px;
+  width: calc(100% - 30px);
   height: 50px;
-  padding-left: 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .mailing__input {
+    width: 358px;
+    padding-left: 16px;
+  }
+}
+@media only screen and (max-width: 767.5px) {
+  .mailing__input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .mailing__input textarea::-moz-placeholder {
@@ -757,8 +819,17 @@ a {
 .mailing__fieldmail,
 .mailing__form,
 .mailing__btn-submit {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .mailing__fieldmail,
+.mailing__form,
+.mailing__btn-submit {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .mailing__icon-wrap {
@@ -769,8 +840,13 @@ a {
 }
 
 .footer .container {
-  display: flex;
-  align-items: baseline;
+  display: block;
+}
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .backdrop {

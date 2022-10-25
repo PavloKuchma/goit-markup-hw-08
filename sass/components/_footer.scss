@@ -1,11 +1,20 @@
 .footer {
+  max-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer-color;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1600px;
+  }
 }
+
 .footer__logo-studio {
   color: $link-hover-color;
 }
@@ -79,19 +88,36 @@
 }
 
 .mailing {
-  margin-left: 93px;
+  @include desktop {
+    margin-left: 93px;
+  }
 }
 .mailing__sendmail {
-  margin-top: 20px;
+  @include desktop {
+    margin-top: 20px;
+  }
 }
 .mailing__input {
-  width: 358px;
+  width: calc(100% - 30px);
   height: 50px;
-  padding-left: 16px;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    width: 358px;
+    padding-left: 16px;
+  }
+
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  @include respond(mobile) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .mailing__input textarea::placeholder {
@@ -134,8 +160,16 @@
 .mailing__fieldmail,
 .mailing__form,
 .mailing__btn-submit {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  @include tablet {
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .mailing__icon-wrap {
@@ -147,6 +181,9 @@
 }
 
 .footer .container {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
 }

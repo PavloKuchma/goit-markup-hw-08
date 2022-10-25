@@ -1,8 +1,19 @@
-.header__container,
 .header__list,
-.header__nav {
-  display: flex;
-  align-items: center;
+.header .contacts {
+  display: none;
+  @include tablet {
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 0;
 }
 
 .pages:not(:last-child) {
@@ -44,11 +55,26 @@
 .footer__logo {
   font-family: 'Raleway', sans-serif;
 
-  @include font-face(700, 26, 1.2, 00.03);
+  @include font-face(700, 24, 1.1, 00.03);
+  margin-top: 16px;
+  margin-bottom: 16px;
   color: $prime-link-color;
+
+  @include tablet {
+  }
+
+  @include desktop {
+    font-family: 'Raleway', sans-serif;
+
+    @include font-face(700, 26, 1.2, 00.03);
+    color: $prime-link-color;
+  }
 }
 
 .logo {
+  padding-left: 15px;
+  padding-top: 16px;
+
   margin-right: 93px;
 }
 
@@ -86,10 +112,12 @@
   height: 12px;
   width: 16px;
 }
+
 .contact__icon-phone {
   height: 16px;
   width: 10px;
 }
+
 .icon-contact {
   margin-right: 10px;
 

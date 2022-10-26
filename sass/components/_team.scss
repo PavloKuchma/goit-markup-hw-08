@@ -48,6 +48,15 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  max-width: 480px;
+
+  @include tablet {
+    width: 354px;
+  }
+
+  @include desktop {
+    width: 270px;
+  }
 }
 
 .team__team-card {
@@ -58,9 +67,7 @@
 }
 
 .team__social-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCC;
   gap: 10px;
   padding-left: 32px;
   padding-right: 32px;

@@ -232,6 +232,8 @@ a {
   .hero {
     max-width: 768px;
     height: 400px;
+    background-color: #c4c4c4;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background/tabletback1x.jpg);
   }
 }
 @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi) {
@@ -245,6 +247,8 @@ a {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-color: #c4c4c4;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/background/deskback1x.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi) {
@@ -266,6 +270,7 @@ a {
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+  color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -329,7 +334,6 @@ a {
 @media screen and (min-width: 1200px) {
   .advantages__list {
     flex-shrink: 1;
-    gap: 30px;
     padding-left: 0;
   }
 }
@@ -359,7 +363,6 @@ a {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  width: 270px;
   margin-bottom: 10px;
   margin-top: 30px;
   text-transform: uppercase;
@@ -529,6 +532,17 @@ a {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  max-width: 480px;
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: 270px;
+  }
 }
 
 .team__team-card {
@@ -724,6 +738,12 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .joinus__title,
+.mailing__title {
+    margin-bottom: 20px;
+  }
+}
 
 .joinus__list {
   display: flex;
@@ -757,6 +777,15 @@ a {
   fill: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__tablet {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .mailing {
     margin-left: 93px;
@@ -776,6 +805,12 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .mailing__input {
+    width: 450px;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .mailing__input {
@@ -799,6 +834,7 @@ a {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
+  margin-left: 16px;
 }
 
 .mailing__input textarea:-ms-input-placeholder {
@@ -810,6 +846,7 @@ a {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
+  margin-left: 16px;
 }
 
 .mailing__input textarea::placeholder {
@@ -821,6 +858,7 @@ a {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
+  margin-left: 16px;
 }
 
 .mailing__btn-submit {

@@ -57,7 +57,7 @@
 .advantages__text {
   @include font-face(null, 14, 1.7, 00.03);
   color: $prime-text-color;
-  width: 450px;
+  max-width: 450px;
   @include tablet {
     width: 354px;
   }

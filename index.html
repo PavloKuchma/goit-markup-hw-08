@@ -39,6 +39,18 @@
               <a href="./contacts.html" class="header__link">Контакти</a>
             </li>
           </ul>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="menu-toggle__span">
+              <svg class="menu-toggle__icon" width="40" height="40">
+                <use href="./img/modal/modal.svg#icon-menu40px"></use>
+                >
+              </svg>
+            </span>
+          </button>
         </nav>
         <!--HeaderContacts-->
         <ul class="contacts">
@@ -67,7 +79,56 @@
           </li>
         </ul>
       </div>
+      <div class="menu-container js-menu-container">
+        <div
+          js-close-menu
+          class="menu-container__close-btn mobile-btn js-close-menu"
+        >
+          <svg class="mobile-cbtn__icon" width="40" height="40">
+            <use href="./img/modal/modal.svg#icon-close40px"></use>
+          </svg>
+        </div>
+
+        <div class="mobile-nav">
+          <ul class="menu-container__list">
+            <li class="mobile-nav__item mobile-nav__item--current">Студія</li>
+            <li class="mobile-nav__item">Портфоліо</li>
+            <li class="mobile-nav__item">Контакти</li>
+          </ul>
+        </div>
+        <div class="mobile-contacts">
+          <ul class="mobile-contacts__list">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tel"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-social">
+          <ul class="mobile-social__list">
+            <li class="mobile-social__item">
+              <a href="instagram.com" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="twitter.com" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="facebook.com" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="linkedin.com" class="mobile-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
+
     <main class="main">
       <!--Hero-->
 
@@ -661,5 +722,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -65,6 +65,13 @@ a {
 .header .contacts {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .header__list,
+.header .contacts {
+    display: flex;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header__list,
 .header .contacts {
@@ -76,6 +83,12 @@ a {
 .header__nav {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header__nav {
@@ -95,8 +108,10 @@ a {
   margin-right: 50px;
 }
 
-.contact:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .contact:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .header__link {
@@ -135,18 +150,21 @@ a {
 @media screen and (min-width: 1200px) {
   .header__logo,
 .footer__logo {
-    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
-    color: #2196f3;
   }
 }
 
 .logo {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .logo {
@@ -173,16 +191,26 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts {
-  display: inline-flex;
-  align-items: center;
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
-.contacts__link {
-  color: #757575;
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    color: #757575;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact__icon-mail {
@@ -670,7 +698,11 @@ a {
   background-color: #2f303a;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+}
+@media only screen and (max-width: 1199.5px) {
+  .footer {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -785,6 +817,11 @@ a {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__tablet {
+    margin-bottom: 0;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .mailing {
@@ -810,12 +847,14 @@ a {
   .mailing__input {
     width: 450px;
     margin-bottom: 20px;
+    padding-left: 16px;
   }
 }
 @media screen and (min-width: 1200px) {
   .mailing__input {
     width: 358px;
     padding-left: 16px;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 767.5px) {
@@ -834,7 +873,6 @@ a {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
-  margin-left: 16px;
 }
 
 .mailing__input textarea:-ms-input-placeholder {
@@ -846,7 +884,6 @@ a {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
-  margin-left: 16px;
 }
 
 .mailing__input textarea::placeholder {
@@ -858,7 +895,6 @@ a {
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.6);
-  margin-left: 16px;
 }
 
 .mailing__btn-submit {
@@ -885,13 +921,20 @@ a {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+@media screen and (min-width: 1200px) {
+  .mailing__btn-submit {
+    margin-left: 20px;
+  }
+}
 
-.mailing__fieldmail,
+@media only screen and (max-width: 767.5px) {
+  .mailing__fieldmail,
 .mailing__form,
 .mailing__btn-submit {
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .mailing__fieldmail,

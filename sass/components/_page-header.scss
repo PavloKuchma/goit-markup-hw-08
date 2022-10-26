@@ -2,6 +2,8 @@
 .header .contacts {
   display: none;
   @include tablet {
+    display: flex;
+    align-items: center;
   }
 
   @include desktop {
@@ -13,6 +15,11 @@
 .header__nav {
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
 
   @include desktop {
     display: flex;
@@ -40,7 +47,9 @@
 }
 
 .contact:not(:last-child) {
-  margin-right: 30px;
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
 .header__link {
@@ -77,14 +86,8 @@
   @include font-face(700, 24, 1.1, 00.03);
   color: $prime-link-color;
 
-  @include tablet {
-  }
-
   @include desktop {
-    font-family: 'Raleway', sans-serif;
-
     @include font-face(700, 26, 1.2, 00.03);
-    color: $prime-link-color;
   }
 }
 
@@ -92,6 +95,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   @include tablet {
+    margin-right: 88px;
   }
   @include desktop {
     margin-right: 93px;
@@ -117,15 +121,23 @@
 }
 
 .contacts {
-  display: inline-flex;
-  align-items: center;
-  margin-left: auto;
+  @include tablet {
+    display: block;
+    text-align: start;
+  }
+  @include desktop {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
 .contacts__link {
-  color: $prime-text-color;
-  display: flex;
-  align-items: center;
+  @include desktop {
+    color: $prime-text-color;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact__icon-mail {

@@ -27,8 +27,8 @@
   top: 50%;
   left: 50%;
 
-  min-height: 580px;
-  min-width: 530px;
+  max-height: 609px;
+  max-width: 450px;
 
   padding-top: 40px;
   padding-right: 40px;
@@ -44,6 +44,11 @@
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: $all-hovfoc-function;
+
+  @include desktop {
+    min-height: 580px;
+    min-width: 530px;
+  }
 }
 
 .backdrop__title {
@@ -79,14 +84,14 @@
 /*SUBMIT FORM*/
 
 .submit-form {
-  width: 448px;
+  max-width: 370px;
   margin-right: auto;
   margin-left: auto;
   display: block;
 }
 
 .submit-form__field {
-  /* outline: 1px solid navy; */
+  // outline: 1px solid navy;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -138,11 +143,14 @@
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: $all-hovfoc-function;
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .submit-form__comment {
   height: 120px;
-  width: 100%;
   margin-bottom: 20px;
 
   padding-top: 10px;
@@ -166,10 +174,14 @@
 .form-checkbox {
   @include flexCC;
   flex-direction: row-reverse;
-  @include font-face(400, 14, 1.7, 00.03);
+  @include font-face(400, 12, 1.2, 00.03);
 
   color: $prime-text-color;
   margin-bottom: 30px;
+
+  @include desktop {
+    @include font-face(400, 14, 1.7, 00.03);
+  }
 }
 
 .submit-form__checkbox {

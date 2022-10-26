@@ -1,5 +1,4 @@
-.header__list,
-.header .contacts {
+.header__list {
   display: none;
   @include tablet {
     display: flex;
@@ -13,8 +12,10 @@
 }
 
 .header__nav {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  @include respond(mobile) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 
   @include tablet {
     display: flex;
@@ -28,15 +29,7 @@
 }
 
 .header__container {
-  // height: 60px;
-  // padding-top: 16px;
-  // padding-bottom: 16px;
-  // padding-bottom: 0;
-
   @include tablet {
-  }
-
-  @include desktop {
     display: flex;
     align-items: center;
   }
@@ -108,19 +101,22 @@
 
 .header__link {
   @include font-face(500, 14, 1.1, 00.02);
-
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 0;
-  padding-right: 0;
-
+  @include tablet {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0;
+    padding-right: 0;
+  }
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: $all-hovfoc-function;
 }
 
 .contacts {
+  @include respond(tablet) {
+    margin-left: auto;
+  }
   @include tablet {
     display: block;
     text-align: start;
@@ -133,6 +129,10 @@
 }
 
 .contacts__link {
+  @include respond(tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   @include desktop {
     color: $prime-text-color;
     display: flex;

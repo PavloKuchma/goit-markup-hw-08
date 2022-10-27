@@ -713,6 +713,16 @@ a {
   }
 }
 
+@media only screen and (max-width: 767.5px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.team__pic {
+  max-width: 100%;
+}
+
 .team__team-card {
   text-align: center;
   padding-top: 30px;
@@ -1129,7 +1139,7 @@ a {
   top: 50%;
   left: 50%;
   max-height: 609px;
-  max-width: 450px;
+  min-width: 450px;
   padding-top: 40px;
   padding-right: 40px;
   padding-left: 40px;
@@ -1181,9 +1191,6 @@ a {
 
 /*SUBMIT FORM*/
 .submit-form {
-  max-width: 370px;
-  margin-right: auto;
-  margin-left: auto;
   display: block;
 }
 
@@ -1230,7 +1237,6 @@ a {
   height: 40px;
   width: 100%;
   margin-top: 4px;
-  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;

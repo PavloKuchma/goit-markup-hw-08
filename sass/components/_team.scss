@@ -49,7 +49,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   max-width: 480px;
-
   @include tablet {
     width: 354px;
   }
@@ -57,6 +56,16 @@
   @include desktop {
     width: 270px;
   }
+}
+
+.team__item:not(:last-child) {
+  @include respond(mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.team__pic {
+  max-width: 100%;
 }
 
 .team__team-card {
